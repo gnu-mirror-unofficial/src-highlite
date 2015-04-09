@@ -206,28 +206,16 @@ istream *open_data_file_istream(const string &path,
         throw IOException("empty file name", input_file_name);
 
     istream *in = 0;
-    if (input_file_name.size() && contains_path(input_file_name)) {
+    if (contains_path(input_file_name)) {
         in = _open_data_file_istream("", input_file_name);
-        if (!in) {
-            throw IOException("cannot open", input_file_name);
-        }
-    } else if (path.size() && input_file_name.size()) {
-        const string file = (path.size() ? path + "/" : "") + input_file_name;
+    } else if (path.size()) {
         in = _open_data_file_istream(path, input_file_name);
-        if (!in) {
-            throw IOException("cannot open", file);
-        }
     } else {
-        string _path = path;
-        string _file = input_file_name;
-        bool has_path = contains_path(input_file_name);
-        if (!path.size() && !has_path)
-            _path = ".";
-
-        in = _open_data_file_istream(_path, _file);
-        if (!in && !path.size() && !has_path)
-            in = _open_data_file_istream(start, _file);
+        in = _open_data_file_istream(".", input_file_name);
     }
+
+    if (!in)  // falback if all else failed, start defaults to start_path
+        in = _open_data_file_istream(start, input_file_name);
 
     if (!in)
         throw IOException("cannot find input file anywhere", input_file_name);
@@ -248,28 +236,16 @@ FILE *open_data_file_stream(const string &path, const string &input_file_name,
         throw IOException("empty file name", input_file_name);
 
     FILE *in = 0;
-    if (input_file_name.size() && contains_path(input_file_name)) {
+    if (contains_path(input_file_name)) {
         in = _open_data_file_stream("", input_file_name);
-        if (!in) {
-            throw IOException("cannot open", input_file_name);
-        }
-    } else if (path.size() && input_file_name.size()) {
-        const string file = (path.size() ? path + "/" : "") + input_file_name;
+    } else if (path.size()) {
         in = _open_data_file_stream(path, input_file_name);
-        if (!in) {
-            throw IOException("cannot open", file);
-        }
     } else {
-        string _path = path;
-        string _file = input_file_name;
-        bool has_path = contains_path(input_file_name);
-        if (!path.size() && !has_path)
-            _path = ".";
-
-        in = _open_data_file_stream(_path, _file);
-        if (!in && !path.size() && !has_path)
-            in = _open_data_file_stream(start, _file);
+        in = _open_data_file_stream(".", input_file_name);
     }
+
+    if (!in)  // falback if all else failed, start defaults to start_path
+        in = _open_data_file_stream(start, input_file_name);
 
     if (!in)
         throw IOException("cannot find input file anywhere", input_file_name);

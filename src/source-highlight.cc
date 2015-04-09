@@ -203,34 +203,35 @@ int main(int argc, char * argv[]) {
     // the default for output format is html
     outputFormat = args_info.out_format_arg;
 
-    if (args_info.data_dir_given) {
-        dataDir = args_info.data_dir_arg;
-    }
-
     if (args_info.output_dir_given) {
         outputDir = args_info.output_dir_arg;
     }
 
     /*
-     the starting default path to search for files is computed at
-     run-time: it is
-     the path of the binary + ".." + RELATIVEDATADIR
-     this should make the package relocable (i.e., not stuck
-     with a fixed installation directory).
+     The starting default path is from Settings::retrieveDataDir() which
+     does the heavy lifting of finding the data dir by looking at config-time
+     values, environment variables, user settings at $HOME, etc. See settings.h
+
+     From here, invoking with --data-dir=<my-datadir> overrides the above value.
+
+     We also use a fallback dir which is calculated in runtime relative to this
+     executable (by default <executable-dir>/../share/source-highlight/).
+
+     this should make the package relocatable (i.e., not stuck with a fixed
+     installation directory).
      Of course, the GNU standards for installation directories
      should be followed, but this is not a problem if you use
      configure and make install features.
-     If no path is specified in the running program we go back to
-     the absolute datadir.
-     */
-    // this is defined in fileutil.cc
-    string prefix_dir = get_file_path(argv[0]);
-    if (prefix_dir.size())
-        start_path = get_file_path(argv[0]) + RELATIVEDATADIR;
-    else
-        start_path = Settings::retrieveDataDir();
+    */
 
-    // if datadir is not specified, we rely on start_path?
+    dataDir = Settings::retrieveDataDir();
+    if (args_info.data_dir_given)
+        dataDir = args_info.data_dir_arg;
+
+    // start_path is global fallback for dataDir - used at fileutil.h
+    string executable_dir = get_file_path(argv[0]);
+    if (executable_dir.size())
+        start_path = executable_dir + RELATIVEDATADIR;
 
     try {
         // initialize map files
