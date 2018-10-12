@@ -4,7 +4,7 @@ include "c_comment.lang"
 label = '^[[:blank:]]*[[:alnum:]]+:[[:blank:]]*\z'
 
 (keyword,normal,classname) = 
-  `(\<struct)([[:blank:]]+)([[:alnum:]_]+)`
+  `(\<(?:enum|struct|union))([[:blank:]]+)([[:alnum:]_]+)`
 
 state preproc start '^[[:blank:]]*#(?:[[:blank:]]*include)' begin
         string delim "<" ">" 

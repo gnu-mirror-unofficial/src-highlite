@@ -1,5 +1,11 @@
 2019-06-01  Tom Tromey  <tom@tromey.com>
 
+	* src/c.lang: Add enum and union as defining a type.
+	* src/cpp.lang: Add enum and union as defining a type.
+	* tests/c.lang.html: Update.
+
+2019-06-01  Tom Tromey  <tom@tromey.com>
+
 	* src/Makefile.am (LANGFILES): Add rust.lang.
 	* doc/index.html: Add Rust.
 	* src/lang.map: Add .rs.

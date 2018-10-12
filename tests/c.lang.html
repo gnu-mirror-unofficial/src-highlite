@@ -8,7 +8,7 @@ http://www.gnu.org/software/src-highlite -->
 <font color="#009900">label</font> <font color="#990000">=</font> <font color="#FF6600">'^[[:blank:]]*[[:alnum:]]+:[[:blank:]]*\z'</font>
 
 <font color="#990000">(</font><font color="#009900">keyword</font><font color="#990000">,</font><font color="#009900">normal</font><font color="#990000">,</font><font color="#009900">classname</font><font color="#990000">)</font> <font color="#990000">=</font> 
-  <font color="#FF6600">`(\&lt;struct)([[:blank:]]+)([[:alnum:]_]+)`</font>
+  <font color="#FF6600">`(\&lt;(?:enum|struct|union))([[:blank:]]+)([[:alnum:]_]+)`</font>
 
 <b><font color="#0000FF">state</font></b> <font color="#009900">preproc</font> <b><font color="#0000FF">start</font></b> <font color="#FF6600">'^[[:blank:]]*#(?:[[:blank:]]*include)'</font> <b><font color="#0000FF">begin</font></b>
         <font color="#009900">string</font> <b><font color="#0000FF">delim</font></b> <font color="#FF0000">"&lt;"</font> <font color="#FF0000">"&gt;"</font> 
