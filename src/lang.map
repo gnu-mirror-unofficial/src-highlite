@@ -169,3 +169,4 @@ ly = lilypond.lang
 groovy = groovy.lang
 json = json.lang
 feature = feature.lang
+rs = rust.lang
