@@ -1,5 +1,15 @@
 2019-06-01  Tom Tromey  <tom@tromey.com>
 
+	* src/d.lang: Update.
+	* tests/c.lang.html: Update expected results.
+	* src/cpp.lang: Use c_preprocessor.lang.  Don't include c.lang.
+	Add keywords.
+	* src/c_preprocessor.lang: New file.
+	* src/c.lang: Include c_preprocessor.lang.
+	* src/Makefile.am (LANGFILES): Add c_preprocessor.lang.
+
+2019-06-01  Tom Tromey  <tom@tromey.com>
+
 	* src/check-regexp_cmd.ggo: Use upper case for metasyntactic
 	variables.
 	* src/check-regexp_cmd.c: Rebuild.
