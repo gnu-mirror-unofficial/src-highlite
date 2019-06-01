@@ -1,5 +1,11 @@
 2019-06-01  Tom Tromey  <tom@tromey.com>
 
+	Bug #55967
+	* tests/test.java.txt: Update results.
+	* src/esc.style (function): Don't use "black".
+
+2019-06-01  Tom Tromey  <tom@tromey.com>
+
 	* tests/lang.list: Add rust.
 
 2019-06-01  Tom Tromey  <tom@tromey.com>
