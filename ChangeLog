@@ -1,5 +1,9 @@
 2019-06-01  Tom Tromey  <tom@tromey.com>
 
+	* tests/lang.list: Add rust.
+
+2019-06-01  Tom Tromey  <tom@tromey.com>
+
 	* src/c.lang: Add enum and union as defining a type.
 	* src/cpp.lang: Add enum and union as defining a type.
 	* tests/c.lang.html: Update.

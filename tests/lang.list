@@ -130,6 +130,7 @@ python = python.lang
 r = r.lang
 rb = ruby.lang
 rc = xml.lang
+rs = rust.lang
 ruby = ruby.lang
 s = s.lang
 scala = scala.lang
