@@ -44,12 +44,12 @@ struct gengetopt_args_info
   const char *help_help; /**< @brief Print help and exit help description.  */
   const char *detailed_help_help; /**< @brief Print help, including all details and hidden options, and exit help description.  */
   const char *version_help; /**< @brief Print version and exit help description.  */
-  char * input_arg;	/**< @brief input file. default std input.  */
-  char * input_orig;	/**< @brief input file. default std input original value given at command line.  */
-  const char *input_help; /**< @brief input file. default std input help description.  */
-  char * output_arg;	/**< @brief output file. default std output (when the third invocation form is used). If STDOUT is specified, the output is directed to standard output.  */
-  char * output_orig;	/**< @brief output file. default std output (when the third invocation form is used). If STDOUT is specified, the output is directed to standard output original value given at command line.  */
-  const char *output_help; /**< @brief output file. default std output (when the third invocation form is used). If STDOUT is specified, the output is directed to standard output help description.  */
+  char * input_arg;	/**< @brief Input file (default=stdin).  */
+  char * input_orig;	/**< @brief Input file (default=stdin) original value given at command line.  */
+  const char *input_help; /**< @brief Input file (default=stdin) help description.  */
+  char * output_arg;	/**< @brief Output file (default=stdout, when the third invocation form is used). If 'STDOUT' is specified, the output is directed to standard output.  */
+  char * output_orig;	/**< @brief Output file (default=stdout, when the third invocation form is used). If 'STDOUT' is specified, the output is directed to standard output original value given at command line.  */
+  const char *output_help; /**< @brief Output file (default=stdout, when the third invocation form is used). If 'STDOUT' is specified, the output is directed to standard output help description.  */
   char * src_lang_arg;	/**< @brief source language (use --lang-list to get the complete list).  If not specified, the source language will be guessed from the file extension..  */
   char * src_lang_orig;	/**< @brief source language (use --lang-list to get the complete list).  If not specified, the source language will be guessed from the file extension. original value given at command line.  */
   const char *src_lang_help; /**< @brief source language (use --lang-list to get the complete list).  If not specified, the source language will be guessed from the file extension. help description.  */

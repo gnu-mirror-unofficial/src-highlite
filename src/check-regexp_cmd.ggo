@@ -9,4 +9,4 @@ package "check-regexp (GNU Source-highlight)"
 purpose "Tries to match the regular expression passed as the first argument
 against the strings passed as remaining arguments"
 
-usage "check-regexp 'regular expression' 'string1' 'string2' ..."
+usage "check-regexp REGULAR_EXPRESSION STRING1 STRING2 ..."

@@ -1,5 +1,14 @@
 2019-06-01  Tom Tromey  <tom@tromey.com>
 
+	* src/check-regexp_cmd.ggo: Use upper case for metasyntactic
+	variables.
+	* src/check-regexp_cmd.c: Rebuild.
+	* src/cmdline.h: Rebuild.
+	* src/cmdline.ggo: Use upper case for metasyntactic variables.
+	* src/cmdline.c: Rebuild.
+
+2019-06-01  Tom Tromey  <tom@tromey.com>
+
 	Bug #55967
 	* tests/test.java.txt: Update results.
 	* src/esc.style (function): Don't use "black".
