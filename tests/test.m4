@@ -1,3 +1,15 @@
+dnl <foo@bar.example.org> xxxxx
+dnl xxxxx <foo@bar.example.org>
+dnl http://www.example.org/bar xxxxx
+dnl xxxxx http://www.example.org/bar
+dnl (http://www.example.org/bar) xxxxx
+dnl xxxxx (http://www.example.org/bar)
+dnl <style>xxxxx</style> xxxxx
+dnl xxxxx <style>xxxxx</style> xxxxx
+dnl xxxxx @synopsis AC_CTAGS_FLAGS
+dnl (@synopsis) AC_CTAGS_FLAGS
+dnl xxxxx (@synopsis) AC_CTAGS_FLAGS
+
 dnl @synopsis AC_CTAGS_FLAGS
 dnl
 dnl check whether it's the correct version of ctags

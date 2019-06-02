@@ -1,5 +1,15 @@
 2019-06-02  Tom Tromey  <tom@tromey.com>
 
+	From Asushi Hayami
+	* THANKS: Update.
+	* tests/test.m4.html: Update expected output.
+	* tests/test.m4: Add URL tests.
+	* src/m4.lang: Update to handle URLs properly in comments.
+	* doc/source-highlight.texi (State/Environment Definitions):
+	Update to handle URLs properly.
+
+2019-06-02  Tom Tromey  <tom@tromey.com>
+
 	* doc/help-output.texinfo: Rebuild.
 
 2019-06-02  Tom Tromey  <tom@tromey.com>

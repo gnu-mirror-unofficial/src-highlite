@@ -2474,16 +2474,21 @@ state keyword start "dnl" begin
   # avoid spaces in front of urls or @@[[:alpha:]]+ be captured as prefixes
   comment = '[[:blank:]]+'
   include "url.lang"
-  include "html.lang"
+  include "html_simple.lang"
   type = '@@[[:alpha:]]+'
+  # avoid non-word characters not include in urls etc in front of urls etc
+  # be captured prefixes
+  comment = '[^[:word:]]'
   # everything else is a comment
-  comment = '.+'
+  comment = '[[:word:]]+'
 end
 @end example
 
 Once entered the state, every isolated space character is highlighted as
-a comment; then we have rules for URLs and @@ elements; then everything
-else (@code{.+}) is highlighted as a comment.
+a comment; then we have rules for URLs and @@ elements; then
+(@code{[^[:word]]+}) not include in URLs and @@ elements is highlighted as
+comment; then everything else (@code{[[:word:]]+}) is highlighted as a
+comment.
 
 One might think that a smarter way would be to have simply the following
 definition (after all, why bothering highlighting spaces as comments):
@@ -2493,7 +2498,11 @@ state keyword start "dnl" begin
   include "url.lang"
   include "html.lang"
   type = '@@[[:alpha:]]+'
-  comment = '.+'
+  # avoid non-word characters not include in urls etc in front of urls etc
+  # be captured prefixes
+  comment = '[^[:word:]]'
+  # everything else is a comment
+  comment = '[[:word:]]+'
 end
 @end example
 
