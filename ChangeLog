@@ -1,5 +1,9 @@
 2019-06-02  Tom Tromey  <tom@tromey.com>
 
+	* doc/help-output.texinfo: Rebuild.
+
+2019-06-02  Tom Tromey  <tom@tromey.com>
+
 	* THANKS: Add Anthony Scopatz.
 	* src/python.lang (keyword): Add async and await.
 
