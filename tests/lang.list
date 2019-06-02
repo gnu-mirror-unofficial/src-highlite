@@ -67,6 +67,7 @@ hx = haxe.lang
 hxx = cpp.lang
 in = makefile.lang
 ini = desktop.lang
+ipxe = ipxe.lang
 islisp = islisp.lang
 java = java.lang
 javalog = javalog.lang

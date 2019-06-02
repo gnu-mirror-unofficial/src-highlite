@@ -261,6 +261,7 @@ test.go test.go.html \
 test.groovy test.groovy.html \
 test.json test.json.html \
 test.feature test.feature.html \
+test.ipxe test.ipxe.html \
 $(WRONGFILES) \
 $(WRONGFILESOUT) \
 $(WRONGSTYLES) $(WRONGSTYLESOUT) \
@@ -434,6 +435,7 @@ check_go \
 check_groovy \
 check_json \
 check_feature \
+check_ipxe \
 check_docbook \
 check_namedgroups \
 check_slang \
@@ -1000,6 +1002,11 @@ check_feature:
 	$(PROGNAME) -i $(srcdir)/test.feature -o test.feature.out.html
 	@echo expect no output from diff
 	$(DIFF) $(srcdir)/test.feature.html test.feature.out.html
+
+check_ipxe:
+	$(PROGNAME) -i $(srcdir)/test.ipxe -o test.ipxe.out.html
+	@echo expect no output from diff
+	$(DIFF) $(srcdir)/test.ipxe.html test.ipxe.out.html
 
 check_lang:
 	$(LANG2HTML) -i $(top_srcdir)/src/log.lang -o log.lang.out.html

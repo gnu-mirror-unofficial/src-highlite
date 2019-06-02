@@ -1,3 +1,14 @@
+2019-06-02  Luc Ducazu <lducazu@gmail.com>
+
+	* THANKS: Update.
+	* tests/lang.list (ipxe): Add ipxe.
+	* tests/Makefile.am (EXTRA_DIST): Add test.ipxe.
+	(check-produced-output): Add check_ipxe.
+	(check_ipxe): New target.
+	* src/lang.map (ipxe): New entry.
+	* src/ipxe.lang: New file.
+	* src/Makefile.am (LANGFILES): Add ipxe.lang.
+
 2019-06-02  Tom Tromey  <tom@tromey.com>
 
 	From Asushi Hayami
