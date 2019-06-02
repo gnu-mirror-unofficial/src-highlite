@@ -1,5 +1,10 @@
 2019-06-02  Tom Tromey  <tom@tromey.com>
 
+	* configure.ac: Version 3.1.9.
+	* NEWS: List new changes.
+
+2019-06-02  Tom Tromey  <tom@tromey.com>
+
 	* tests/Makefile.am (DISTCLEANFILES): Add *testtmp.
 
 2019-06-02  Tom Tromey  <tom@tromey.com>
