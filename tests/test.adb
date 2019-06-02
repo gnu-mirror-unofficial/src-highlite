@@ -26,6 +26,8 @@ procedure Test is
    Test_String  : String := "Some test string";
    --  This is an example test string
 
+   Test_Attr    : Integer := Test_String'Length;
+
    type Test_Person_Type is tagged record
       Name : String (1 .. 8);
       --  Name
