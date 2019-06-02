@@ -262,6 +262,7 @@ test.groovy test.groovy.html \
 test.json test.json.html \
 test.feature test.feature.html \
 test.ipxe test.ipxe.html \
+test.zsh test.zsh.txt \
 $(WRONGFILES) \
 $(WRONGFILESOUT) \
 $(WRONGSTYLES) $(WRONGSTYLESOUT) \

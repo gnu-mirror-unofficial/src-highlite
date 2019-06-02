@@ -1,3 +1,7 @@
+2019-06-02  Tom Tromey  <tom@tromey.com>
+
+	* tests/Makefile.am (EXTRA_DIST): Add test.zsh and test.zsh.txt.
+
 2019-06-02  Atte Peltomaki <atte.peltomaki@iki.fi>
 
 	* tests/lang.list (vim): New entry.
