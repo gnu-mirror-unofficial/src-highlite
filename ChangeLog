@@ -1,5 +1,10 @@
 2019-06-02  Tom Tromey  <tom@tromey.com>
 
+	* THANKS: Add Anthony Scopatz.
+	* src/python.lang (keyword): Add async and await.
+
+2019-06-02  Tom Tromey  <tom@tromey.com>
+
 	Bug #45299
 	* THANKS: Add Doron Behar.
 	* tests/Makefile.am (check_zsh): New target.
