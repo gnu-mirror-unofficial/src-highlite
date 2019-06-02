@@ -163,6 +163,7 @@ upc = upc.lang
 vala = vala.lang
 vbs = vbscript.lang
 vbscript = vbscript.lang
+vim = vim.lang
 xhtml = xml.lang
 xml = xml.lang
 xorg = xorg.lang

@@ -1,3 +1,11 @@
+2019-06-02  Atte Peltomaki <atte.peltomaki@iki.fi>
+
+	* tests/lang.list (vim): New entry.
+	* src/Makefile.am (LANGFILES): Add vim.lang.
+	* THANKS: Update.
+	* src/vim.lang: New file.
+	* src/lang.map (vim): New entry.
+
 2019-06-02  Luc Ducazu <lducazu@gmail.com>
 
 	* THANKS: Update.
