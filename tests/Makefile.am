@@ -483,7 +483,8 @@ check_lineranges \
 check_regexranges \
 check_nobgcolor \
 check_tabs \
-check_failsafe
+check_failsafe \
+check_zsh
 
 remove_css_html_files:
 	rm -f *.css.java.html *.nf_css.java.html
@@ -1034,6 +1035,11 @@ check_namedgroups:
 	@echo expect no output from diff
 	$(DIFF) $(srcdir)/test.ngroups.html test.ngroups.out.html
 	$(DIFF) $(srcdir)/test_state.ngroups.html test_state.ngroups.out.html
+
+check_zsh:
+	$(PROGNAME) -s zsh -f esc --style-file=$(top_srcdir)/src/esc.style --doc --lang-def=$(srcdir)/../src/zsh.lang -n -i $(srcdir)/test.zsh -o test.zsh.out.txt
+	@echo expect no output from diff
+	$(DIFF) $(srcdir)/test.zsh.txt test.zsh.out.txt
 
 .lang.err_out:
 	$(CHECKLANG) ./$< 2> $@ || true; 

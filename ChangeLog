@@ -1,3 +1,14 @@
+2019-06-02  Tom Tromey  <tom@tromey.com>
+
+	Bug #45299
+	* THANKS: Add Doron Behar.
+	* tests/Makefile.am (check_zsh): New target.
+	(check-produced-output): Add check_zsh.
+	* src/zsh.lang (keyword): Remove trailing "|" and duplicate
+	"exec".  (Thanks to Doron Behar.)
+	* tests/test.zsh: New file.
+	* tests/test.zsh.txt: New file.
+
 2019-06-01  Tom Tromey  <tom@tromey.com>
 
 	* src/d.lang: Update.
