@@ -1,5 +1,9 @@
 2019-06-02  Tom Tromey  <tom@tromey.com>
 
+	* tests/Makefile.am (DISTCLEANFILES): Add *testtmp.
+
+2019-06-02  Tom Tromey  <tom@tromey.com>
+
 	* tests/test.adb.html: Update expected results.
 	* tests/test.adb: Add use of 'Length attribute.
 	* src/ada.lang: Treat character literals more precisely.

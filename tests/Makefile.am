@@ -1323,6 +1323,6 @@ CLEANFILES = *.out.html *.out.txt *.out.tex *.err_out *.unknown_out *.out.debug 
 clean_html:
 	rm -f *.h.html *.java.html *.cc.html *.pas.html *.pl.html *.pm.html *.php3.html *.py.html *.chlog.html *.chlog_css.html *.l.html test_xhtml*.html test_notfixed.html test_css.html test_css_nodoc.html test_header.html *.rb.html *.js.html *.java.txt *.java.tex *.h.docbook *.java.texinfo *.lua.html *.ml.html *.sml.html test_*_lines.html *.log.html *.y.html *.simple.html *.ngroups.html *.tex.html *.lgt.html *.diff.html *.lang.html *.htm.html *.style.html *.cs.html *.xml.html *.sh.html *.url.html *.txt.html *.unknown.html *.tcl.html *.bib.html *.makefile.html *.css.html *.ps.html *.sl.html *.isolate.html *.backref.html *.c.html *.wdefault.html *.wodefault.html *.properties.html *.desktop.html *.lsm.html *.spec.html *.hx.html *.fortran.html *.fixed-fortran.html *.hx.html *.m4.html *.scala.html *.adb.html *.conf.html *.xorg.html
 
-DISTCLEANFILES=my_test_ref_tmp.tags $(TEMP_TAGFILE)
+DISTCLEANFILES=my_test_ref_tmp.tags $(TEMP_TAGFILE) *testtmp
 
 #DISTCLEANFILES=test_ref.xhtml test_ref.tags test_ref.tags tags test_ref.tex test_ref_post.tex test_ref.texinfo syslog.style.html test_ref.docbook
