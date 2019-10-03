@@ -32,7 +32,7 @@ int main() {
         cout << e << endl;
         ostringstream output;
         output << e;
-        assertEquals("cannot open include file " TESTSDIR "/nonexistent.lang", output.str());
+        assertEquals("cannot open include file nonexistent.lang", output.str());
     }
 
     try {
@@ -52,7 +52,7 @@ int main() {
         cout << e << endl;
         ostringstream output;
         output << e;
-        assertEquals("cannot open include file " TESTSDIR "/nonexistent.outlang", output.str());
+        assertEquals("cannot open include file nonexistent.outlang", output.str());
     }
 
     cout << "test_filenotfound: SUCCESS" << endl;

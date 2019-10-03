@@ -40,7 +40,7 @@ int main() {
         assertTrue(false); // must not get here
     } catch (IOException &e) {
         //cout << "expected exception: " << e << endl;
-        assertEqualsException("cannot open " BASEDIR "/nonexistent.style.", e);
+        assertEqualsException("cannot find input file anywhere nonexistent.style.", e);
     }
 
     try {
@@ -62,7 +62,7 @@ int main() {
         assertTrue(false); // must not get here
     } catch (IOException &e) {
         //cout << "expected exception: " << e << endl;
-        assertEqualsException("cannot open " BASEDIR "/nonexistent.style.", e);
+        assertEqualsException("cannot find input file anywhere nonexistent.style.", e);
     }
 
     try {
