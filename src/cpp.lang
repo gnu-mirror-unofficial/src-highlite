@@ -7,9 +7,11 @@ include "c_comment.lang"
 
 include "c_preprocessor.lang"
 
-include "number.lang"
-
 include "c_string.lang"
+
+number =
+'\<[+-]?((0b[01\']+)|(0x[[:xdigit:]\']+)|(([[:digit:]\']*\.)?
+[[:digit:]\']+([eE][+-]?[[:digit:]\']+)?))u?((int(?:8|16|32|64))|L)?\>'
 
 keyword = "__asm|__cdecl|__declspec|__export|__far16",
   "__fastcall|__fortran|__import",
