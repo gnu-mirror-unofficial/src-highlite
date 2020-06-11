@@ -27,7 +27,7 @@ extern std::string start_path;
  * @return the contents of the file
  * @throw IOException
  */
-string readFile(const string &fileName) throw (IOException);
+string readFile(const string &fileName);
 
 //char *read_file(const string &fileName);
 

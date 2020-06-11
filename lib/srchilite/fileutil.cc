@@ -48,7 +48,7 @@ void set_file_util_verbose(bool b) {
 // FIXME avoid using a global variable
 std::string start_path;
 
-string readFile(const string &fileName) throw (IOException) {
+string readFile(const string &fileName) {
     ifstream file(fileName.c_str());
 
     if (!file.is_open()) {

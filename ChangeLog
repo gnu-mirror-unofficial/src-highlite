@@ -1,3 +1,8 @@
+2020-06-10  Tom Tromey  <tom@tromey.com>
+
+	* lib/srchilite/fileutil.cc (readFile): Remove "throw".
+	* lib/srchilite/fileutil.h (readFile): Remove "throw".
+
 2020-06-10  Vedran Vidovic  <vvidovic>
 
 	* tests/lang.list: Update.
