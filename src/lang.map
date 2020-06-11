@@ -172,3 +172,5 @@ feature = feature.lang
 rs = rust.lang
 ipxe = ipxe.lang
 vim = vim.lang
+yaml = yaml.lang
+yml = yaml.lang

@@ -169,5 +169,7 @@ xml = xml.lang
 xorg = xorg.lang
 y = bison.lang
 yacc = bison.lang
+yaml = yaml.lang
+yml = yaml.lang
 yy = bison.lang
 zsh = zsh.lang
