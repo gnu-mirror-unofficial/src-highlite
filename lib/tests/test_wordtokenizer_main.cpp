@@ -11,6 +11,14 @@
 using namespace std;
 using namespace srchilite;
 
+/*
+ * We have to use 'std' namespaces because 'WordTokenizer::WordTokenizerResults::value_type'
+ * is an std::pair<std::string, std::string> in disguise. We have to place 'operator<<()'
+ * into the same namespace for ADL to work. Otherwise gcc-12 or clang-13 can't find the
+ * overload.
+ */
+namespace std {
+
 static ostream &operator <<(ostream &os, const WordTokenizer::WordTokenizerResults::value_type &);
 
 ostream &operator <<(ostream &os, const WordTokenizer::WordTokenizerResults::value_type &token) {
@@ -21,6 +29,8 @@ ostream &operator <<(ostream &os, const WordTokenizer::WordTokenizerResults::val
     }
 
     return os;
+}
+
 }
 
 int main() {
